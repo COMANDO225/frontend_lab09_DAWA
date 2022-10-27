@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- CATEGORIES SECTION -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3>Crear Categoria</h3>
+            </div>
+            <div class="col-6">
+                <input id="input-name" type="text" placeholder="Ingresa el nombre del la categoria" name="name"
+                    class="form-control" />
+            </div>
+            <div class="col-6">
+                <button id="btn-create" class="btn btn-primary">Crear</button>
+            </div>
+        </div>
+        <div class="table-responsive mt-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th>id</th>
+                    <th>Nombre</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- PRODUCTS SECTION -->
+    <div class="container mt-5">
+        <form class="row"
+        id="form-product">
+            <div class="col-12">
+                <h3>Crear Producto</h3>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input id="input-name-product" type="text" placeholder="Ingresa el nombre del producto" name="name"
+                        class="form-control" />
+                </div>
+                <div class="col-3">
+                    <div class="input-group">
+                        <input id="input-price-product" type="number" placeholder="Precio" name="price"
+                        class="form-control" />
+                        <span class="input-group-text" id="precio-simbol">S/.</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="input-group">
+                        <input min="0" max="100" id="input-discount-product" type="number" placeholder="Descuento" name="discount"
+                        class="form-control" />
+                        <span class="input-group-text" id="basic-addon1">%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <select id="select-category" class="form-select" aria-label="Default select example"
+                        name="category">
+                        <option selected>Selecciona una categoria</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <input id="input-image-product" type="file" class="form-control" name="image"
+                            aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                    </div>
+                </div>
+            </div>
+            <div class="row px-4">
+                    <button type="submit" id="btn-create-product" class="btn btn-primary wFull">Crear manin</button>
+            </div>
+        </form>
+        <div class="table-responsive mt-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>precio</th>
+                    <th>categoria</th>
+                    <th>descuento</th>
+                    <th>imagen url</th>
+                    <th>imagen</th>
+                </thead>
+                <tbody id="tbody-product"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="./src/service.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
